@@ -7,34 +7,68 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="gradient">
     <header></header>
-    <main class="gradient">
-      <!-- <section class="card">
+    <main>
+      <section class="card-registration">
         <h1>Registration Form</h1>
         <form action="" method="POST">
-
-          <div class="item-wrapper">
-            <div class="item">
+          <div class="card-item-wrapper">
+            <div class="card-item">
               <label>First Name</label>
-              <input type="text" class="type id name" />
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name..."
+              />
             </div>
-            <div class="item"></div>
+            <div class="card-item">
+              <label>Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name..."
+              />
+            </div>
           </div>
-          <div class="item-wrapper">
-            <div class="item"></div>
-            <div class="item"></div>
+          <div class="card-item-wrapper">
+            <div class="card-item">
+              <label>Last Name</label>
+              <input type="date" id="dob" name="dateofbirth" />
+            </div>
+            <div class="card-item">
+              <div class="radio-container">
+                <input type="radio" name="gender" checked="checked" />Male
+                <span class="checkmark"></span>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="gender" />Female<span
+                  class="checkmark"
+                ></span>
+              </div>
+            </div>
           </div>
-          <div class="item-wrapper">
-            <div class="item"></div>
-            <div class="item"></div>
+          <div class="card-item-wrapper">
+            <div class="card-item">
+              <label>Email</label><input type="text" />
+            </div>
+            <div class="card-item">
+              <label>Phone Number</label><input type="text" />
+            </div>
           </div>
-          <div class="item-wrapper">
-            <div class="item"></div>
+          <div class="card-item-wrapper">
+            <div class="card-item">
+              <label for="">ICNumber</label><input type="text" />
+            </div>
           </div>
-          <button></button>
+          <div class="card-item-wrapper">
+            <button class="button-default">Submit</button>
+            <button class="button-default">Cancel</button>
+          </div>
         </form>
-      </section> -->
+      </section>
     </main>
     <footer></footer>
   </body>

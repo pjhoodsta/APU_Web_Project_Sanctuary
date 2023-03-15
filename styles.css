@@ -6,7 +6,7 @@
   font-family: poppins, arial, helvetica neue, sans-serif;
 }
 
-main.gradient {
+body.gradient {
   background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
   background-color: rgba(0, 0, 0, 0);
   background-position-x: 0%;
@@ -19,7 +19,9 @@ main.gradient {
     rgb(108, 64, 121) 100%
   );
 
-  background-size: 100%;
+  width: 100%;
+  height: auto;
+
   background-origin: padding-box;
   background-clip: border-box;
 }
@@ -36,11 +38,16 @@ label {
   display: block;
   margin-bottom: 5px;
 }
-section.card {
+section.card-registration {
   border-color: black;
-  border-width: 1rem;
+  border-radius: 0.5rem;
 
   width: 20rem;
   height: 100%;
   background-color: white;
+  padding: 2rem;
+}
+
+.radio-container {
+  cursor: pointer;
 }
