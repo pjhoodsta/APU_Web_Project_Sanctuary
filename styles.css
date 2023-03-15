@@ -39,9 +39,32 @@ label {
   display: block;
   margin-bottom: 5px;
 }
+
+input.input-default {
+}
+
+.button-default {
+  background-color: #4272d7;
+  border-radius: 0.3rem;
+  border: none;
+
+  padding: 0.7rem;
+  margin-block: 0.2rem;
+
+  cursor: pointer;
+
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  width: 5.9rem;
+}
+
 section.card-registration {
-  border-color: black;
   border-radius: 0.5rem;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
 
   width: 20rem;
   height: 100%;
@@ -49,21 +72,10 @@ section.card-registration {
   padding: 2rem;
 }
 
-.button-default {
-  background-color: #4272d7;
-  border-radius: 0.3rem;
-  border-color: none;
-  border: none;
-
-  padding: 0.5rem;
-  cursor: pointer;
-
-  color: white;
-}
-
 .card-item-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-block: 0.9rem;
 }
 
 .radio-container {
