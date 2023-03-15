@@ -5,6 +5,12 @@
   background-color: transparent;
   font-family: poppins, arial, helvetica neue, sans-serif;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
 body.gradient {
   background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
@@ -25,11 +31,6 @@ body.gradient {
   background-origin: padding-box;
   background-clip: border-box;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 label {
   font-size: 16px;
@@ -46,6 +47,23 @@ section.card-registration {
   height: 100%;
   background-color: white;
   padding: 2rem;
+}
+
+.button-default {
+  background-color: #4272d7;
+  border-radius: 0.3rem;
+  border-color: none;
+  border: none;
+
+  padding: 0.5rem;
+  cursor: pointer;
+
+  color: white;
+}
+
+.card-item-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .radio-container {
