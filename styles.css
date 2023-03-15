@@ -85,9 +85,18 @@ section.card-registration {
 .card-item-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-block: 0.9rem;
+  margin-block: 1.5rem;
+
+  width: 100%;
 }
 
-.radio-container {
+.card-item {
+  width: 46.2%;
+}
+
+#radio-container {
+}
+.radio-item {
   cursor: pointer;
+  width: 100%;
 }
