@@ -86,7 +86,6 @@ section.card-registration {
   display: flex;
   justify-content: space-between;
   margin-block: 1.5rem;
-
   width: 100%;
 }
 
@@ -95,31 +94,30 @@ section.card-registration {
 }
 .radio-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin-top: 0.8rem;
 }
 
 .radio-item {
   cursor: pointer;
   display: flex;
+  margin-right: 1.9rem;
 }
 input[type="radio"] {
   appearance: none;
   /* For iOS < 15 to remove gradient background */
-  background-color: #666;
+  background-color: #e5e5e5;
   /* Not removed via appearance */
-  margin: 0;
-  font: inherit;
-  color: #e5e5e5;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 50%;
+  border: 0.3rem solid #e5e5e5;
 
+  outline: none;
+  border-radius: 0.8rem;
   place-content: center;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
 }
-input[type="radio"]::before {
+
+input[type="radio"]:checked {
+  background-color: #57b846;
 }
