@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body class="gradient">
     <header></header>
     <main>
-      <section class="card" id="log-in">
-        <div class="card-item-wrapper">
+      <section class="card login" id="log-in">
+        <div class="card-item-wrapper card-item-wrapper-login-left">
           <div class="card-item">
             <img src="./images/log-in-image.webp" alt="log-in-image" />
           </div>
         </div>
-        <div class="card-item-wrapper card-item-wrapper-login flex-box-column">
+        <div
+          class="card-item-wrapper card-item-wrapper-login-right flex-box-column"
+        >
           <h1>Member Login</h1>
-          <form action="" method="POST">
-            <div class="card-item">
+          <form class="login" action="" method="POST">
+            <div class="card-item input-icons">
+              <i class="fa fa-envelope icon" aria-hidden="true"> </i>
               <input
                 class="box-login"
                 type="text"
@@ -28,7 +35,9 @@
                 placeholder="Your e-mail"
               />
             </div>
-            <div class="card-item">
+            <div class="card-item input-icons">
+              <i class="fa fa-lock icon" aria-hidden="true"> </i>
+
               <input
                 class="box-login"
                 type="text"
