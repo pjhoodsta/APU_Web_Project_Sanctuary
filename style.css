@@ -5,6 +5,7 @@
   font-family: poppins, arial, helvetica neue, sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
+  list-style: none;
 }
 
 body {
@@ -159,6 +160,13 @@ section.card {
   padding: 2rem;
 }
 
+section.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 section.login {
   width: 33.4rem;
   height: 100%;
@@ -220,4 +228,14 @@ section.registration {
   cursor: pointer;
   display: flex;
   margin-right: 1.9rem;
+}
+.navbar-tooltip {
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+ul.navbar-nav {
+  display: flex;
+  position: relative;
+  float: right;
 }
