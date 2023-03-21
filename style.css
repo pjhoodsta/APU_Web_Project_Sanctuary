@@ -69,17 +69,27 @@ button {
   width: 5.9rem;
 }
 
-section.card-registration {
+img {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+section.card {
   border-radius: 0.5rem;
   border: none;
 
   display: flex;
-  flex-direction: column;
 
   width: 27.4rem;
   height: 100%;
   background-color: white;
   padding: 2rem;
+}
+
+.flex-box-column {
+  flex-direction: column;
 }
 
 .card-item-wrapper {
@@ -88,10 +98,17 @@ section.card-registration {
   margin-block: 1.5rem;
   width: 100%;
 }
+.card-item-wrapper-login {
+  justify-content: space-around;
+}
 
 .card-item {
+}
+
+.card-item-registration-width {
   width: 46.2%;
 }
+
 .radio-container {
   display: flex;
   justify-content: flex-start;
@@ -105,6 +122,21 @@ section.card-registration {
   display: flex;
   margin-right: 1.9rem;
 }
+
+input[type="text"] {
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #e5e5e5;
+  /* Not removed via appearance */
+  outline: none;
+  border-radius: 1.4rem;
+  place-content: center;
+}
+
+input.login {
+  margin-bottom: 0.6rem;
+}
+
 input[type="radio"] {
   appearance: none;
   /* For iOS < 15 to remove gradient background */
