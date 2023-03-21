@@ -8,25 +8,38 @@
   list-style: none;
 }
 
-body {
+a:link {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-body.gradient {
-  background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+main.gradient {
+  background: linear-gradient(to top right, #ff9933 0%, #fc4c02 100%);
   background-color: rgba(0, 0, 0, 0);
   background-position-x: 0%;
   background-position-y: 0%;
   background-repeat: repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(
-    to right top,
-    rgb(252, 44, 119) 0%,
-    rgb(108, 64, 121) 100%
-  );
+  background-image: linear-gradient(to right top, #ff9933 0%, #fc4c02 100%);
 
   width: 100%;
   height: auto;
@@ -34,7 +47,6 @@ body.gradient {
   background-origin: padding-box;
   background-clip: border-box;
 }
-
 header {
   width: 100%;
   display: flex;
@@ -46,6 +58,7 @@ header {
   left: -1px;
   right: -1px;
 }
+
 h1 {
   font-weight: 750;
   margin-bottom: 1.6rem;
@@ -156,15 +169,17 @@ section.card {
 
   display: flex;
 
-  background-color: white;
   padding: 2rem;
+  background-color: white;
 }
 
 section.navbar {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  background-color: white;
+  padding: 0;
+  width: 100%;
 }
 
 section.login {
@@ -238,4 +253,21 @@ ul.navbar-nav {
   display: flex;
   position: relative;
   float: right;
+  background-color: #ff9933;
+}
+li.nav {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.topline {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 0.6rem;
+  background-color: #ff9933;
+  display: flex;
+  flex-wrap: wrap;
 }
