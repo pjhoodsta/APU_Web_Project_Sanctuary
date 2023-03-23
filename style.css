@@ -245,6 +245,7 @@ section.registration {
   margin-right: 1.9rem;
 }
 .navbar-tooltip {
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: flex-end;
@@ -257,17 +258,17 @@ ul.navbar-nav {
 }
 li.nav {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-  margin-right: 1.5rem;
 }
 
-.topline {
+.fillerline {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   height: 0.6rem;
   background-color: #ff9933;
   display: flex;
   flex-wrap: wrap;
+}
+#background-color-white {
+  background-color: white;
 }
