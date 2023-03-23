@@ -311,6 +311,7 @@ li.nav {
 .backgrouind-color-light-yellow {
   background-color: #fbf9d7;
 }
-.outline-orange {
-  outline: #ff9933 solid 0.1rem;
+.border-default {
+  border: #ff9933 solid 0.15rem;
+  border-radius: 0.3rem;
 }
