@@ -106,6 +106,12 @@ button {
   width: 6.6rem;
 }
 
+button.register-now {
+  background-color: white;
+  color: black;
+  width: 7rem;
+}
+
 button.login {
   width: 104.5%;
   margin-block: 1.1rem;
@@ -200,6 +206,7 @@ section.card {
 
 section.index {
   width: 80%;
+  align-items: center;
 }
 
 section.login {
@@ -258,6 +265,19 @@ section.registration {
   justify-content: space-around;
   align-items: center;
 }
+.card-item-latest-news > * {
+  font-size: 2.2vmax;
+}
+.card-item-register-now {
+  width: 75%;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 2.5rem;
+  color: white;
+}
+.card-item-register-now > * {
+  font-size: 2.2vmax;
+}
 
 .card-item-registration {
   width: 46.2%;
@@ -292,10 +312,17 @@ ul.navbar-nav {
   float: right;
   background-color: #ff9933;
 }
-li.nav {
+ul.navbar-nav > * {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 }
-
+ul.register-now {
+  margin-bottom: 0.6rem;
+}
+ul.register-now > * {
+  margin-bottom: 0.6rem;
+  font-size: 2.1vmax;
+  font-weight: 300;
+}
 .fillerline {
   width: 100%;
   margin-right: auto;
@@ -308,10 +335,26 @@ li.nav {
 .background-color-white {
   background-color: white;
 }
+
 .backgrouind-color-light-yellow {
   background-color: #fbf9d7;
 }
+.font-color-white {
+  color: ;
+}
 .border-default {
-  border: #ff9933 solid 0.15rem;
-  border-radius: 0.3rem;
+  border: #ff9933 solid 0.3rem;
+}
+.border-radius-default {
+  border-radius: 0.8rem;
+}
+
+.background-image-register-now {
+  background-image: url(./images/toolbar-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.margin-bottom-index {
+  margin-bottom: 2rem;
 }
