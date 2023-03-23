@@ -64,16 +64,34 @@ h1 {
   margin-bottom: 1.6rem;
 }
 
+h2 {
+  font-weight: 750;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+}
+
+.font-size-vmax {
+  font-size: 2.2vmax;
+}
+
+p {
+  margin-bottom: 0.9rem;
+  font-size: 1rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
 label {
   font-size: 16px;
   color: #555;
   text-transform: capitalize;
-  display: flex;
   margin-bottom: 0.5rem;
 }
 
 button {
-  background-color: #4272d7;
+  background-color: #ff9933;
   border-radius: 0.3rem;
   border: none;
 
@@ -82,18 +100,16 @@ button {
   color: white;
   font-weight: 500;
   font-size: 1.1rem;
+
+  padding: 0.7rem;
+  margin-block: 0.2rem;
+  width: 6.6rem;
 }
 
 button.login {
-  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
   width: 104.5%;
   margin-block: 1.1rem;
-}
-
-button.registration {
-  padding: 0.7rem;
-  margin-block: 0.2rem;
-  width: 5.9rem;
+  padding: 0.3rem;
 }
 
 form.login {
@@ -232,11 +248,15 @@ section.registration {
 }
 
 .card-item-slider {
-  width: 65%;
+  width: 60%;
 }
 
 .card-item-latest-news {
   width: 30%;
+  padding-inline: 1rem;
+  padding-block: 2.5rem;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .card-item-registration {
