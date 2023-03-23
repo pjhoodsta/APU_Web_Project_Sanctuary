@@ -206,6 +206,10 @@ section.registration {
   display: flex;
 }
 
+.card-item-container-index-top {
+  justify-content: space-around;
+}
+
 .card-item-container-registration {
   justify-content: space-between;
   width: 100%;
@@ -228,7 +232,7 @@ section.registration {
 }
 
 .card-item-slider {
-  width: 60%;
+  width: 65%;
 }
 
 .card-item-latest-news {
