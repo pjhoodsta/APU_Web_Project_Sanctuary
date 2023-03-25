@@ -187,6 +187,7 @@ img {
 .card-item-slider img {
   width: auto;
   min-width: 100%;
+  border-radius: 0.4rem;
 }
 
 section.navbar {
@@ -365,12 +366,14 @@ ul.register-now > * {
     font-size: 0.7rem;
   }
   .card-item-register-now > * {
-    font-size: 2.2vmax;
+    font-size: 0.9rem;
   }
 
   .card-item-slider {
     width: 52%;
-    height: 52%;
+    height: 12.5rem;
+  }
+  .card-item-slider img {
   }
 
   .card-item-latest-news {
