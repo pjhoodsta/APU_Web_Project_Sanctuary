@@ -240,6 +240,9 @@ section.registration {
   justify-content: space-around;
   align-items: center;
 }
+.card-item-container-index-services > * {
+  color: #fc4c02;
+}
 
 .card-item-container-registration {
   justify-content: space-between;
@@ -260,6 +263,15 @@ section.registration {
 .card-item {
   width: 100%;
   display: flex;
+}
+
+.card-item-icon-container {
+  justify-content: space-evenly;
+  height: 100%;
+}
+.card-item-icon {
+  display: flex;
+  margin-bottom: 0.5rem;
 }
 
 .card-item-slider {
@@ -372,6 +384,11 @@ ul.register-now > * {
   .card-item-slider {
     width: 52%;
     height: 12.5rem;
+  }
+
+  .card-item-container-index-services > * {
+    font-size: 0.9rem;
+    color: #fc4c02;
   }
 
   .card-item-latest-news {
