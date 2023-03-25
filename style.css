@@ -245,9 +245,13 @@ section.registration {
 
 .card-item-container-index-services {
   color: #fc4c02;
-  width: 90%;
+  width: 100%;
   background-repeat: no-repeat;
-  background: linear-gradient(white 70%, #eee8e2 30%);
+  background: linear-gradient(white 65%, #eee8e2 35%);
+  align-items: center;
+}
+.card-item-container-index-services > * {
+  width: 85%;
 }
 
 .card-item-container-registration {
@@ -278,6 +282,8 @@ section.registration {
 .card-item-icon {
   display: flex;
   margin-bottom: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-item-slider {
@@ -395,8 +401,15 @@ ul.register-now > * {
 
   .card-item-container-index-services > * {
     font-size: 0.9rem;
+    width: 75%;
   }
-
+  .card-item-icon img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .card-item-icon p {
+    font-size: 0.6rem;
+  }
   .card-item-latest-news {
     width: 35%;
     padding-inline: 0.5rem;
