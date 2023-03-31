@@ -213,7 +213,9 @@ section.card {
 section.index {
   width: 85%;
   align-items: center;
-  margin-top: 1rem;
+
+  margin-block: 1rem;
+
   padding: 0;
 }
 
@@ -249,6 +251,7 @@ section.registration {
   background-repeat: no-repeat;
   background: linear-gradient(white 65%, #eee8e2 35%);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .card-item-container-index-services > * {
   width: 85%;
@@ -276,8 +279,6 @@ section.registration {
 }
 
 .card-item-icon-container {
-  justify-content: space-evenly;
-  height: 100%;
 }
 .card-item-icon {
   display: flex;
@@ -396,7 +397,7 @@ ul.register-now > * {
 
   .card-item-slider {
     width: 50%;
-    height: 11.7rem;
+    height: 12.4rem;
   }
 
   .card-item-container-index-services > * {
