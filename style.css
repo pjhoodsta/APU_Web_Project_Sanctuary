@@ -234,6 +234,17 @@ section.sidebar a:active {
   text-decoration: none;
   color: black;
 }
+section.sidebar a:before {
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  left: -0.7rem;
+  top: 55%;
+  margin-top: -0.7rem;
+  content: "";
+  background: #da624a;
+  border-radius: 0.6rem;
+}
 
 section.card-container {
   width: 65%;
