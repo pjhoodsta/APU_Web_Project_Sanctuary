@@ -218,6 +218,23 @@ section.sidebar {
   width: 30%;
 }
 
+section.sidebar a:link {
+  text-decoration: none;
+  color: black;
+}
+section.sidebar a:visited {
+  text-decoration: none;
+  color: black;
+}
+section.sidebar a:hover {
+  text-decoration: none;
+  color: black;
+}
+section.sidebar a:active {
+  text-decoration: none;
+  color: black;
+}
+
 section.card-container {
   width: 65%;
 }
