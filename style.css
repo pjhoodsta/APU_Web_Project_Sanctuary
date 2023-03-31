@@ -47,6 +47,10 @@ main.gradient {
   background-origin: padding-box;
   background-clip: border-box;
 }
+main.root-content {
+  justify-content: flex-start;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -210,6 +214,14 @@ section.card {
   background-color: white;
 }
 
+section.sidebar {
+  width: 30%;
+}
+
+section.card-container {
+  width: 65%;
+}
+
 section.index {
   width: 85%;
   align-items: center;
@@ -335,6 +347,13 @@ section.registration {
 .navbar-brand {
   margin: 0.5rem 1rem 0.1rem 1rem;
 }
+ul.sidebar-menu {
+  display: flex;
+  position: relative;
+}
+ul.sidebar-menu > * {
+}
+
 ul.navbar-nav {
   display: flex;
   position: relative;
