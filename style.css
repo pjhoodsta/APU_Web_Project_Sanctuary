@@ -217,6 +217,11 @@ section.card {
 section.sidebar {
   width: 10%;
   margin-left: 0.5rem;
+  padding-right: 2.3rem;
+  box-shadow: 0 1.46875rem 8.2875rem rgba(31, 10, 60, 0.47),
+    0 0.9375rem 1.40625rem rgba(31, 10, 60, 0.47),
+    0 0.25rem 0.53125rem rgba(31, 10, 60, 0.47),
+    0 0.125rem 0.1875rem rgba(31, 10, 60, 0.47);
 }
 
 section.sidebar a:link {
@@ -365,8 +370,8 @@ section.registration {
 ul.sidebar-menu {
   display: flex;
   position: relative;
-  line-height: 1.5rem;
   padding: 0.9rem;
+  line-height: 1.9rem;
 }
 
 ul.sidebar-menu li::before {
@@ -378,6 +383,10 @@ ul.sidebar-menu li::before {
   height: 0.5rem;
   margin-top: 7.7%;
   left: -0.4rem;
+}
+ul.sidebar-menu > li > * {
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 ul.navbar-nav {
@@ -434,7 +443,7 @@ ul.register-now > * {
 
 @media screen and (max-width: 600px) {
   section.sidebar {
-    width: 30%;
+    width: 25%;
     margin-left: 0.5rem;
   }
 
@@ -445,8 +454,12 @@ ul.register-now > * {
     border-radius: 2rem;
     width: 0.4rem;
     height: 0.4rem;
-    margin-top: 7.1%;
-    left: -0.4rem;
+    margin-top: 10.8%;
+    left: -0.2rem;
+  }
+  ul.sidebar-menu > li > * {
+    font-size: 1rem;
+    font-weight: 500;
   }
   .card-item-latest-news > * {
     font-size: 0.7rem;
