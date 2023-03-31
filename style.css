@@ -215,7 +215,8 @@ section.card {
 }
 
 section.sidebar {
-  width: 30%;
+  width: 10%;
+  margin-left: 0.5rem;
 }
 
 section.sidebar a:link {
@@ -277,7 +278,6 @@ section.registration {
 .card-item-container-index-services {
   color: #fc4c02;
   width: 100%;
-  background-repeat: no-repeat;
   background: linear-gradient(white 65%, #eee8e2 35%);
   align-items: center;
   margin-bottom: 1rem;
@@ -307,8 +307,6 @@ section.registration {
   display: flex;
 }
 
-.card-item-icon-container {
-}
 .card-item-icon {
   display: flex;
   margin-bottom: 0.5rem;
@@ -367,25 +365,21 @@ section.registration {
 ul.sidebar-menu {
   display: flex;
   position: relative;
-}
-ul.sidebar-menu > * {
   line-height: 1.5rem;
+  padding: 0.9rem;
 }
 
 ul.sidebar-menu li::before {
+  content: "";
   position: absolute;
+  background-color: #da624a;
+  border-radius: 2rem;
   width: 0.5rem;
   height: 0.5rem;
-  left: -0.8rem;
-  top: 50%;
-  margin-top: -0.2rem;
-  content: "";
-  background: #da624a;
-  border-radius: 2rem;
+  margin-top: 7.7%;
+  left: -0.4rem;
 }
-/* ul.sidebar-menu a::after {
-  box-sizing: border-box;
-} */
+
 ul.navbar-nav {
   display: flex;
   position: relative;
@@ -439,6 +433,21 @@ ul.register-now > * {
 }
 
 @media screen and (max-width: 600px) {
+  section.sidebar {
+    width: 30%;
+    margin-left: 0.5rem;
+  }
+
+  ul.sidebar-menu li::before {
+    content: "";
+    position: absolute;
+    background-color: #da624a;
+    border-radius: 2rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-top: 7.1%;
+    left: -0.4rem;
+  }
   .card-item-latest-news > * {
     font-size: 0.7rem;
   }
