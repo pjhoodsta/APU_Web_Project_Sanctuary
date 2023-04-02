@@ -1,3 +1,47 @@
+<?php
+$mysqli=require __DIR__."/database.php";
+$default_role="member";
+// var_dump($_POST["email"]);
+
+// if(empty($_POST["email"])){
+//   die("email cannot be null");
+// }
+// if (strlen($_POST["email"])>= 5){
+//   die("email cannot be more than 5 letters");
+// }
+
+// homework find how to hash password and send hash password to database. do not send user-written string password to db. function based. no over engineering
+
+$user_sql="INSERT INTO users(role,
+firstName,
+lastName,
+phoneNumber,
+email,
+gender,
+ic,
+pass) VALUES(?,?,?,?,?,?,?)";
+
+$statement=$mysqli->stmt_init();
+
+if(!$statement->prepare($user_sql)){
+  die("sql error". $mysqli->error);
+}
+
+
+$statement->bind_param("sss",
+$default_role, $_POST['firstName'],
+$_POST['lastName'], $_POST['phoneNumber'],
+$_POST['email'], $_POST['gender'], $_POST['ic'],
+$_POST['password']);
+
+if($statement->execute()){
+  echo("successful");
+  exit;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,8 +82,8 @@
               <label>First Name</label>
               <input
                 type="text"
-                id="fname"
-                name="firstname"
+                id="firstName"
+                name="firstName"
                 placeholder="Your name..."
               />
             </div>
@@ -47,8 +91,8 @@
               <label>Last Name</label>
               <input
                 type="text"
-                id="lname"
-                name="lastname"
+                id="lastName"
+                name="lastName"
                 placeholder="Your last name..."
               />
             </div>
@@ -77,21 +121,26 @@
           <div class="card-item-container card-item-container-registration">
             <div class="card-item card-item-registration flex-box-column">
               <label>Email</label
-              ><input type="text" placeholder="Your Email..." />
+              ><input type="text" id="email" name="email" placeholder="Your Email..." />
             </div>
             <div class="card-item card-item-registration flex-box-column">
               <label>Phone Number</label
-              ><input type="text" placeholder="Your phone number..." />
+              ><input type="text" id="phoneNumber" name="phoneNumber" placeholder="Your phone number..." />
             </div>
           </div>
           <div class="card-item-container card-item-container-registration">
             <div class="card-item card-item-registration flex-box-column">
               <label for="">IC Number</label
-              ><input type="text" placeholder="Your IC Number..." />
+              ><input type="text" id="ic" name="ic" placeholder="Your IC Number..." />
+            </div>
+            <div class="card-item card-item-registration flex-box-column">
+              <label for="">password</label
+              ><input type="text" id="password" name="password" placeholder="Your password..." />
             </div>
           </div>
-        </form>
         <button type="submit" class="">Sign Up</button>
+
+        </form>
       </section>
     </main>
     <footer></footer>
