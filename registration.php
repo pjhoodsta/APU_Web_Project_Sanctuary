@@ -1,59 +1,3 @@
-<?php
-$mysqli=require __DIR__."/database.php";
-$default_role="member";
-// var_dump($_POST["email"]);
-
-// if(empty($_POST["email"])){
-//   die("email cannot be null");
-// }
-// if (strlen($_POST["email"])>= 5){
-//   die("email cannot be more than 5 letters");
-// }
-
-// homework find how to hash password and
-//send hash password to database.
-//do not send user-written string password to db.
-//function based. no over engineering
-
-$user_sql="INSERT INTO users(role,
-firstName,
-lastName,
-phoneNumber,
-email,
-gender,
-ic,
-pass,
-birthday)
-VALUES(?,?,?,?,?,?,?,?,?)";
-
-
-$statement=$mysqli->stmt_init();
-
-if(!$statement->prepare($user_sql)){
-  die("sql error". $mysqli->error);
-}
-$pass="";
-
-if(isset($_POST["pass"]))
-$pass=  $_POST["pass"] ;
-$hash=password_hash($pass, PASSWORD_DEFAULT);
-
-$statement->bind_param("ssssssssb",
-$default_role, $_POST['firstName'],
-$_POST['lastName'], $_POST['phoneNumber'],
-$_POST['email'], $_POST['gender'], $_POST['ic'],
-$hash, $_POST['birthday']);
-
-
-
-if($statement->execute()){
-  echo("successful");
-  exit;
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -88,7 +32,7 @@ if($statement->execute()){
     <main class="gradient">
       <section class="card registration flex-box-column">
         <h1>Registration Form</h1>
-        <form action="/registration.php" method="POST">
+        <form action="./registration-post.php" method="POST">
           <div class="card-item-container card-item-container-registration">
             <div class="card-item card-item-registration flex-box-column">
               <label>First Name</label>
@@ -118,11 +62,11 @@ if($statement->execute()){
               <label>Gender</label>
               <div class="radio-container">
                 <label class="radio-item">
-                  <input type="radio" id="male" name="gender" checked="checked" />
+                  <input type="radio" id="male"  name="gender" checked="checked" />
                   Male
                 </label>
                 <label class="radio-item">
-                  <input type="radio" id="female" name="gender" />
+                  <input type="radio" id="female"  name="gender" />
                   Female
                 </label>
               </div>
