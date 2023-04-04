@@ -10,7 +10,10 @@ $default_role="member";
 //   die("email cannot be more than 5 letters");
 // }
 
-// homework find how to hash password and send hash password to database. do not send user-written string password to db. function based. no over engineering
+// homework find how to hash password and
+//send hash password to database.
+//do not send user-written string password to db.
+//function based. no over engineering
 
 $user_sql="INSERT INTO users(role,
 firstName,
@@ -19,7 +22,9 @@ phoneNumber,
 email,
 gender,
 ic,
-pass) VALUES(?,?,?,?,?,?,?)";
+pass,
+birthday)
+VALUES(?,?,?,?,?,?,?,?,?)";
 
 $statement=$mysqli->stmt_init();
 
@@ -28,11 +33,11 @@ if(!$statement->prepare($user_sql)){
 }
 
 
-$statement->bind_param("sss",
+$statement->bind_param("ssssssssb",
 $default_role, $_POST['firstName'],
 $_POST['lastName'], $_POST['phoneNumber'],
 $_POST['email'], $_POST['gender'], $_POST['ic'],
-$_POST['password']);
+$_POST['pass'], $_POST['birthday']);
 
 if($statement->execute()){
   echo("successful");
@@ -82,8 +87,8 @@ if($statement->execute()){
               <label>First Name</label>
               <input
                 type="text"
-                id="firstName"
                 name="firstName"
+                id="firstName"
                 placeholder="Your name..."
               />
             </div>
@@ -91,7 +96,6 @@ if($statement->execute()){
               <label>Last Name</label>
               <input
                 type="text"
-                id="lastName"
                 name="lastName"
                 placeholder="Your last name..."
               />
@@ -107,11 +111,11 @@ if($statement->execute()){
               <label>Gender</label>
               <div class="radio-container">
                 <label class="radio-item">
-                  <input type="radio" name="gender" checked="checked" />
+                  <input type="radio" id="male" name="gender" checked="checked" />
                   Male
                 </label>
                 <label class="radio-item">
-                  <input type="radio" name="gender" />
+                  <input type="radio" id="female" name="gender" />
                   Female
                 </label>
               </div>
@@ -131,11 +135,11 @@ if($statement->execute()){
           <div class="card-item-container card-item-container-registration">
             <div class="card-item card-item-registration flex-box-column">
               <label for="">IC Number</label
-              ><input type="text" id="ic" name="ic" placeholder="Your IC Number..." />
+              ><input type="text"  name="ic" placeholder="Your IC Number..." />
             </div>
             <div class="card-item card-item-registration flex-box-column">
               <label for="">password</label
-              ><input type="text" id="password" name="password" placeholder="Your password..." />
+              ><input type="text"  name="pass" placeholder="Your password..." />
             </div>
           </div>
         <button type="submit" class="">Sign Up</button>
