@@ -26,18 +26,23 @@ pass,
 birthday)
 VALUES(?,?,?,?,?,?,?,?,?)";
 
+
 $statement=$mysqli->stmt_init();
 
 if(!$statement->prepare($user_sql)){
   die("sql error". $mysqli->error);
 }
 
+$password=$_POST['pass'];
+$hash=password_hash($password, PASSWORD_DEFAULT);
 
 $statement->bind_param("ssssssssb",
 $default_role, $_POST['firstName'],
 $_POST['lastName'], $_POST['phoneNumber'],
 $_POST['email'], $_POST['gender'], $_POST['ic'],
-$_POST['pass'], $_POST['birthday']);
+$hash, $_POST['birthday']);
+
+
 
 if($statement->execute()){
   echo("successful");
@@ -135,11 +140,11 @@ if($statement->execute()){
           <div class="card-item-container card-item-container-registration">
             <div class="card-item card-item-registration flex-box-column">
               <label for="">IC Number</label
-              ><input type="text"  name="ic" placeholder="Your IC Number..." />
+              ><input type="text" id="ic" name="ic" placeholder="Your IC Number..." />
             </div>
             <div class="card-item card-item-registration flex-box-column">
               <label for="">password</label
-              ><input type="text"  name="pass" placeholder="Your password..." />
+              ><input type="text" id="pass" name="pass" placeholder="Your password..." />
             </div>
           </div>
         <button type="submit" class="">Sign Up</button>
