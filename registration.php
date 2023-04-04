@@ -32,9 +32,11 @@ $statement=$mysqli->stmt_init();
 if(!$statement->prepare($user_sql)){
   die("sql error". $mysqli->error);
 }
+$pass="";
 
-$password=$_POST['pass'];
-$hash=password_hash($password, PASSWORD_DEFAULT);
+if(isset($_POST["pass"]))
+$pass=  $_POST["pass"] ;
+$hash=password_hash($pass, PASSWORD_DEFAULT);
 
 $statement->bind_param("ssssssssb",
 $default_role, $_POST['firstName'],
@@ -86,7 +88,7 @@ if($statement->execute()){
     <main class="gradient">
       <section class="card registration flex-box-column">
         <h1>Registration Form</h1>
-        <form action="" method="POST">
+        <form action="/registration.php" method="POST">
           <div class="card-item-container card-item-container-registration">
             <div class="card-item card-item-registration flex-box-column">
               <label>First Name</label>
@@ -144,7 +146,7 @@ if($statement->execute()){
             </div>
             <div class="card-item card-item-registration flex-box-column">
               <label for="">password</label
-              ><input type="text" id="pass" name="pass" placeholder="Your password..." />
+              ><input type="text" id="pass" name="pass"  placeholder="Your password..." />
             </div>
           </div>
         <button type="submit" class="">Sign Up</button>
