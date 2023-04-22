@@ -6,6 +6,11 @@
   font-weight: 500;
   font-size: 1.1rem;
   list-style: none;
+  box-sizing: inherit;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 a:link {
@@ -62,7 +67,11 @@ header {
   left: -1px;
   right: -1px;
 }
-
+body {
+  font: 1em/1.618 Inter, sans-serif;
+  color: #224;
+  background: url;
+}
 h1 {
   font-weight: 750;
   margin-bottom: 1.6rem;
